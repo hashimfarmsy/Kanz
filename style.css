@@ -1,0 +1,164 @@
+
+:root {
+  --primary: #123B68;
+  --teal: #20A89A;
+  --white: #FFFFFF;
+  --light: #EAF3F8;
+  --text: #18334D;
+  --border: #DCE7EF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.main-header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 25px 18px;
+  text-align: center;
+  border-radius: 0 0 24px 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.brand-icon {
+  background: var(--teal);
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+}
+
+.brand h1 {
+  font-size: 23px;
+}
+
+.brand p {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.main-header h2 {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #DCEAF5;
+}
+
+main {
+  padding: 20px 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.search-section {
+  margin-bottom: 25px;
+}
+
+.search-section input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  font-size: 15px;
+  outline: none;
+  background: var(--white);
+}
+
+.search-section input:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px #20A89A22;
+}
+
+.categories-section h2 {
+  color: var(--primary);
+  font-size: 21px;
+  margin-bottom: 15px;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.category-btn {
+  min-height: 115px;
+  padding: 15px 8px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--white);
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 27px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.category-btn span {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.category-btn:active {
+  background: var(--teal);
+  color: var(--white);
+  transform: scale(0.97);
+}
+
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: 22px 12px;
+  margin-top: 30px;
+}
+
+footer h3 {
+  color: var(--teal);
+  font-size: 20px;
+}
+
+footer p {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+@media (min-width: 600px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
